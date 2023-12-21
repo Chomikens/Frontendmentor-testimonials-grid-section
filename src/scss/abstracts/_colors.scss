@@ -1,12 +1,12 @@
 $colors: (
 	neutral: (
-		light: white,
-		normal: gray,
-		dark: black,
+		light-gray: hsl(0, 0%, 81%),
+		light-blue: hsl(210, 46%, 95%),
 	),
 	primary: (
-		light: lightblue,
-		normal: blue,
-		dark: darkblue,
+		normal-white: hsl(0, 0%, 100%),
+		normal-violet: hsl(263, 55%, 52%),
+		light-blue: hsl(217, 19%, 35%),
+		dark-blue: hsl(219, 29%, 14%),
 	),
 );

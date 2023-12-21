@@ -1,12 +1,11 @@
-$ff-sans: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+$ff-sans: 'Barlow Semi Condensed', sans-serif;
 
 $font-sizes: (
-	900: 3.75rem,
-	800: 3rem,
-	600: 1.5rem,
-	500: 1.3125rem,
-	400: 1.125rem,
+	default: 0.8125rem,
+	heading: 1.25rem,
 );
 
-$fw-400: 400;
-$fw-700: 700;
+$fw-500: 500;
+$fw-600: 600;
