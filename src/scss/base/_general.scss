@@ -3,7 +3,9 @@
 body {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	min-height: 100vh;
+	background-color: getColors(neutral, light-blue);
 }
 
 .sr-only:not(:focus):not(:active) {
