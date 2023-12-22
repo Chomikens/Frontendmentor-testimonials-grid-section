@@ -4,8 +4,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
 	min-height: 100vh;
+
 	background-color: getColors(neutral, light-blue);
+	color: getColors(primary, light-blue);
+	font-weight: $fw-500;
 }
 
 .sr-only:not(:focus):not(:active) {

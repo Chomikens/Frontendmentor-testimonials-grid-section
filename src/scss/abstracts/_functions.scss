@@ -2,8 +2,6 @@
 @use 'colors' as *;
 @use 'typography' as *;
 
-
-
 @function getColors($shade, $color) {
 	@if map-has-key($colors, $shade, $color) {
 		@return map.get($colors, $shade, $color);

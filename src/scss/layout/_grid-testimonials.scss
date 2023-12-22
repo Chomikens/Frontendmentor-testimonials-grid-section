@@ -4,11 +4,19 @@
 .testimonials {
 	&__grid {
 		display: grid;
-		grid-template-columns: minmax(20.4375rem, 1fr);
-		grid-auto-rows: minmax(11.9375rem, 1fr);
+		// When using aproach with grid-areas, remember to change this
+		grid-template-columns: repeat(auto-fit, minmax(15.9375rem, 1fr));
+		//
+		grid-auto-flow: dense;
+		grid-auto-rows: min-content;
 		column-gap: 1.875rem;
 		row-gap: 1.5rem;
 
+		/* 
+		
+		Another approach with grid-template areas
+
+		
 		@include mq(small) {
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-areas:
@@ -24,8 +32,53 @@
 				'Daniel Daniel Johnatan Kira'
 				'Jahnette Patrick Patrick Kira';
 		}
+		*/
+
+		@include mq(large) {
+			.col-span {
+				grid-column: span 2;
+			}
+
+			.row-span {
+				grid-row: span 2;
+				&--kira {
+					grid-column: 4;
+					grid-row: 1 / span 2;
+				}
+			}
+		}
+
+		&__header {
+			&--innerGrid {
+				display: grid;
+				grid-template-columns: 1.75rem 1fr;
+				grid-template-areas:
+					'image name'
+					'image status';
+				align-items: center;
+				justify-content: center;
+				column-gap: 1.0625rem;
+			}
+		}
 	}
 }
+
+.header--innerGrid {
+	&__image {
+		grid-area: image;
+	}
+
+	&__name {
+		grid-area: name;
+	}
+
+	&__status {
+		grid-area: status;
+	}
+}
+
+/* 
+		Another approach with grid-template areas
 
 [data-aligment='1'] {
 	@include mq(small) {
@@ -53,3 +106,5 @@
 		grid-area: Kira;
 	}
 }
+
+*/

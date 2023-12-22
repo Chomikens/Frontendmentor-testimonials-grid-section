@@ -1,0 +1,56 @@
+@use '../abstracts/' as *;
+
+.testimonials__grid__article {
+	padding: 2rem;
+	border-radius: 0.5rem;
+
+	color: getColors(primary, dark-blue);
+
+	background-color: #fff;
+	box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+
+	font-size: fontSizes(default);
+
+	.testimonials--content {
+		color: rgba(getColors(primary, dark-blue), 0.5);
+	}
+}
+
+.header--innerGrid {
+	&__image {
+		border-radius: 100vh;
+	}
+
+	&__status {
+		font-size: fontSizes(status);
+		color: rgba(getColors(primary, dark-blue), 0.7);
+	}
+}
+
+.grid__header__heading {
+	font-size: fontSizes(heading);
+}
+
+.violet,
+.light-blue,
+.dark-blue {
+	color: getColors(primary, normal-white);
+	.testimonials--content {
+		color: rgba(getColors(primary, normal-white), 0.5);
+	}
+
+	.header--innerGrid__status {
+		color: rgba(getColors(primary, normal-white), 0.7);
+	}
+}
+
+.violet {
+	background-color: getColors(primary, normal-violet);
+}
+.light-blue {
+	background-color: getColors(primary, light-blue);
+}
+
+.dark-blue {
+	background-color: getColors(primary, dark-blue);
+}
